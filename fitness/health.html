@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Back Button (Top-Left) -->
+    <div class="back-page-container">
+        <a href="dashboard.html" class="back-page-btn">
+            <img src="dd.jpg" alt="Back" class="back-icon">
+        </a>
+    </div>
+
+    <!-- Next Page Button (Top-Right) -->
+    <div class="next-page-container">
+        <a href="progress.html" class="next-page-btn">
+            <img src="ay.jpg" alt="Next Page" class="next-icon">
+        </a>
+    </div>
+
+    <h1>Health Monitor</h1>
+
+    <div class="container">
+        <!-- Heart Rate Tracker -->
+        <div class="workout-schedule">
+            <h2>Heart Rate Monitor</h2>
+            <p>Heart Rate: <span id="bpm">--</span> BPM</p>
+            <button onclick="trackHeartbeat()">Check Heart Rate</button>
+        </div>
+
+        <!-- Calories Calculator -->
+        <div class="workout-schedule">
+            <h2>Calories Calculator</h2>
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter age">
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter height">
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter weight">
+
+            <button onclick="calculateCalories()">Calculate Calories</button>
+            <p>Estimated Calories: <span id="caloriesResult">--</span> kcal</p>
+        </div>
+    </div>
+
+    <script src="health.js"></script>
+
+</body>
+</html>

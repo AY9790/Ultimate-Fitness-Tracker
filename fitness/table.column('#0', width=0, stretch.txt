@@ -1,0 +1,7 @@
+table.column('#0', width=0, stretch=NO)
+table.column('#1', width=50, stretch=False)
+table.column('#2', width=95, stretch=NO)  # Date column
+table.column('#3', width=150, stretch=NO)  # Payee column
+table.column('#4', width=325, stretch=NO)  # Title column
+table.column('#5', width=135, stretch=NO)  # Amount column
+table.column('#6', width=125, stretch=NO)  # Mode of Payment column

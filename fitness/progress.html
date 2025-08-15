@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress & Achievements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Back Button (To Health Page) -->
+    <div class="back-page-container">
+        <a href="health.html" class="back-page-btn">
+            <img src="dd.jpg" alt="Back" class="back-icon">
+        </a>
+    </div>
+
+    <!-- Next Page Button (To Tasks Page) -->
+    <div class="next-page-container">
+        <a href="task.html" class="next-page-btn">
+            <img src="ay.jpg" alt="Next Page" class="next-icon">
+        </a>
+    </div>
+
+    <h1>Progress & Achievements</h1>
+
+    <div class="container">
+        <!-- Steps Counter -->
+        <div class="workout-schedule">
+            <h2>Step Counter</h2>
+            <p>Steps Today: <span id="steps">0</span></p>
+            <button onclick="trackSteps()">Increase Steps</button>
+        </div>
+
+        <!-- User Achievements -->
+        <div class="workout-schedule">
+            <h2>Achievements</h2>
+            <ul id="achievements-list">
+                <li>🏆 1000 Steps - Beginner</li>
+                <li>🥇 5000 Steps - Intermediate</li>
+                <li>🏅 10000 Steps - Pro</li>
+            </ul>
+        </div>
+
+        <!-- Progress Ranking -->
+        <div class="workout-schedule">
+            <h2>Progress Ranking</h2>
+            <p>Your Rank: <span id="rank">Beginner</span></p>
+        </div>
+    </div>
+
+    <script src="progress.js"></script>
+
+</body>
+</html>

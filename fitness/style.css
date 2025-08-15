@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #E0E0E0; /* Soft white text */
+}
+
+/* Layout Containers */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.left-container, .right-container {
+    width: 48%;
+    height: 90vh;
+    padding: 20px;
+    background: #1E1E1E; /* Dark gray */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 127, 0.2);
+    overflow: auto;
+}
+
+/* Cards & Sections */
+.workout-schedule, .workout-history, .chart-container {
+    background: #1A1A1A; /* Darker section background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.2); /* Neon glow */
+    border: 1px solid #00FF7F;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.workout-schedule:hover, .workout-history:hover, .chart-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 255, 127, 0.5);
+}
+
+/* Time Display */
+.time-display {
+    font-size: 2em;
+    font-weight: bold;
+    color: #00FF7F;
+}
+
+/* Buttons */
+button {
+    display: block;
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #00FF7F;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 127, 0.8);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc66;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 1);
+    transform: scale(1.05);
+}
+
+/* Inputs & Selects */
+select, input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #2A2A2A;
+    color: #E0E0E0;
+    border: 1px solid #00FF7F;
+    border-radius: 8px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+select option {
+    background: #1A1A1A;
+    color: #E0E0E0;
+}
+
+input:focus, select:focus {
+    border-color: #00cc66;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 127, 0.8);
+}
+
+/* Workout History Entries */
+.history-entry {
+    background: #2A2A2A;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.history-entry:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 255, 127, 0.6);
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Edit and Delete Buttons */
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Edit Button */
+.edit-btn {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 1);
+    transform: scale(1.05);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(135deg, #FF4C4C, #CC0000);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 76, 76, 0.8);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #CC0000, #990000);
+    box-shadow: 0 0 15px rgba(255, 76, 76, 1);
+    transform: scale(1.05);
+}
+
+/* Next Page Button */
+.next-page-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.next-page-btn {
+    display: inline-block;
+    background: rgba(0, 255, 127, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 255, 127, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.next-page-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 255, 127, 1);
+}
+
+/* Back Page Button */
+.back-page-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-page-btn {
+    display: inline-block;
+    background: rgba(0, 255, 127, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 255, 127, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-page-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 255, 127, 1);
+}
+
+/* Fix Arrow Icon Size */
+.next-icon, .back-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    canvas {
+        height: 220px !important;
+    }
+
+    .next-page-container, .back-page-container {
+        top: 10px;
+    }
+
+    .next-icon, .back-icon {
+        width: 28px;
+        height: 28px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List & Completed Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Back Button (To Progress Page) -->
+    <div class="back-page-container">
+        <a href="progress.html" class="back-page-btn">
+            <img src="dd.jpg" alt="Back" class="back-icon">
+        </a>
+    </div>
+
+    <!-- Next Page Button (To Workout Page) -->
+    <div class="next-page-container">
+        <a href="workout.html" class="next-page-btn">
+            <img src="ay.jpg" alt="Next Page" class="next-icon">
+        </a>
+    </div>
+
+    <h1>Task Manager</h1>
+
+    <div class="container">
+        <!-- Add Task Section -->
+        <div class="workout-schedule">
+            <h2>Add Task</h2>
+            <label for="taskDate">Date:</label>
+            <input type="date" id="taskDate">
+
+            <label for="taskInput">Task:</label>
+            <input type="text" id="taskInput" placeholder="Enter your task">
+
+            <button id="addTaskButton">Add Task</button>
+        </div>
+
+        <!-- Pending Tasks -->
+        <div class="workout-schedule">
+            <h2>Pending Tasks</h2>
+            <ul id="pendingTasks"></ul>
+        </div>
+
+        <!-- Completed Tasks -->
+        <div class="workout-schedule">
+            <h2>Completed Tasks</h2>
+            <ul id="completedTasks"></ul>
+        </div>
+    </div>
+
+    <script src="task.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Fitness Tracker</title>
+    <link rel="stylesheet" href="frontpage.css">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Top Right Auth Section -->
+    <div class="auth-section" id="auth-buttons">
+        <button class="neon-btn" onclick="window.location.href='login.html'">Login</button>
+        <button class="neon-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+
+    <!-- Logout Button -->
+    <div class="logout-container" id="logout-section" style="display: none;">
+        <button id="logout-btn" class="neon-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Centered Content -->
+    <main class="hero-section">
+        <div class="glassmorphic-box">
+            <h1 class="title">✨ Ultimate Fitness Tracker ✨</h1>
+            <p class="tagline">Track. Train. Transform.</p>
+            <a href="dashboard.html" class="neon-btn" id="start-btn">Get Started</a>
+        </div>
+    </main>
+
+    <script src="particles.js"></script>
+    <script src="frontpage.js"></script>
+</body>
+</html>

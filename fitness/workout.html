@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock & Workout</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            background: url('pexels-photo-1522285.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .left-container, .right-container {
+            width: 48%;
+            height: 90vh;
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px cyan;
+            overflow: auto;
+        }
+        .left-container {
+            animation: glowEffect 3s infinite alternate;
+        }
+        @keyframes glowEffect {
+            from { box-shadow: 0px 0px 10px cyan; }
+            to { box-shadow: 0px 0px 20px cyan; }
+        }
+        .container {
+            text-align: center;
+            background: rgba(30, 30, 30, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #00ffcc;
+            margin: 10px 0;
+            border: 1.5px solid #00ffcc;
+        }
+        .time-display {
+            font-size: 1.9em;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+        button {
+            margin: 3px;
+            padding: 8px 15px;
+            border: none;
+            background: #00ffcc;
+            color: #121212;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .exercise-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            justify-content: center;
+        }
+        .exercise {
+            width: 75px;
+            cursor: pointer;
+            text-align: center;
+            padding: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            border: 2px solid cyan;
+            box-shadow: 0 0 6px cyan;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .exercise:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px cyan;
+        }
+        .exercise img {
+            width: 100%;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <a href="task.html" style="position: absolute; top: 20px; left: 20px;">
+        <img src="dd.jpg" alt="Back" style="width: 40px; height: 40px;">
+    </a>
+
+    <div class="left-container">
+        <h1 style="text-align:center;">Time Breaker 🕑</h1>
+        <div class="container">
+            <h2>Clock</h2>
+            <div id="clock" class="time-display"></div>
+        </div>
+        <div class="container">
+            <h2>Timer</h2>
+            <div id="timer" class="time-display">00:00</div>
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+        <div class="container">
+            <h2>Stopwatch</h2>
+            <div id="stopwatch" class="time-display">00:00:00</div>
+            <button onclick="startStopwatch()">Start</button>
+            <button onclick="pauseStopwatch()">Pause</button>
+            <button onclick="resetStopwatch()">Reset</button>
+        </div>
+    </div>
+    <div class="right-container">
+        <h1 style="text-align:center;">Basic Warm-up Exercises</h1>
+        <div class="exercise-container">
+	 <body>
+        <div class="exercise" onclick="openModal('Dumbbell Lateral Lunge', 'pexels-photo-999257.jpg')">
+            <img src="pexels-photo-999257.jpg" alt="Dumbbell Lateral Lunge">
+            <p>Dumbbell Lateral Lunge</p>
+        </div>
+        <div class="exercise" onclick="openModal('Seated hamstring stretch', 'pexels-photo-3771071.jpg')">
+            <img src="pexels-photo-3771071.jpg" alt="Seated hamstring stretch">
+            <p>Seated hamstring stretch</p>
+        </div>
+        <div class="exercise" onclick="openModal('Plank', 'images.jpg')">
+            <img src="images.jpg" alt="Plank">
+            <p>Plank</p>
+        </div>
+      <div class="exercise" onclick="openModal('Skipping', 'Skipping-3-1200x900-1-1024x768.jpg')">
+            <img src="Skipping-3-1200x900-1-1024x768.jpg" alt="Skipping">
+            <p>Skipping</p>
+        </div>
+      <div class="exercise" onclick="openModal('Squat.', 'pexels-photo-7187856.jpg')">
+            <img src="pexels-photo-7187856.jpg" alt="Squat">
+            <p>Squat</p>
+        </div>
+      <div class="exercise" onclick="openModal('Standing quadriceps stretch', 'oi.jpg')">
+            <img src="oi.jpg" alt="Standing quadriceps stretch">
+            <p>Standing quadriceps stretch</p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+	    <h2 id="exercise-title"></h2>
+            <img id="exercise-img" src="" alt="Exercise" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, imgSrc) {
+            document.getElementById("exercise-title").innerText = title;
+            document.getElementById("exercise-img").src = imgSrc;
+            document.getElementById("modal").style.display = "flex";
+        }
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            document.getElementById("clock").innerText = new Date().toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        let timerInterval, timerTime = 0;
+        function startTimer() {
+            if (!timerInterval) {
+                timerInterval = setInterval(() => {
+                    timerTime++;
+                    document.getElementById("timer").innerText = new Date(timerTime * 1000).toISOString().substr(14, 5);
+                }, 1000);
+            }
+        }
+        function pauseTimer() { clearInterval(timerInterval); timerInterval = null; }
+        function resetTimer() { pauseTimer(); timerTime = 0; document.getElementById("timer").innerText = "00:00"; }
+	// Stopwatch (Fast speed with step-by-step increments)
+        let stopwatchInterval;
+        let stopwatchTime = 0;
+        function startStopwatch() {
+            if (!stopwatchInterval) {
+                stopwatchInterval = setInterval(() => {
+                    stopwatchTime++;
+                    let date = new Date(stopwatchTime * 1000);
+                    document.getElementById("stopwatch").innerText = date.toISOString().substr(11, 8);
+                }, 200); // Updates every 200ms for a faster effect but step-by-step
+            }
+        }
+        
+        function pauseStopwatch() { clearInterval(stopwatchInterval); stopwatchInterval = null; }
+        function resetStopwatch() { pauseStopwatch(); stopwatchTime = 0; document.getElementById("stopwatch").innerText = "00:00:00"; }
+    </script>
+</body>
+</html>

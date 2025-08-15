@@ -1,0 +1,125 @@
+/* Fullscreen Background */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #000000, #121212, #1E1E1E);
+    overflow: hidden;
+}
+
+/* Particle Background */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Top Right Auth Section */
+.auth-section {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Logout Button */
+.logout-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: none; /* Initially hidden */
+}
+
+/* Neon Buttons */
+.neon-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #00FF7F, #00cc66);
+    color: #121212;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.neon-btn:hover {
+    background: linear-gradient(135deg, #00cc66, #00994d);
+    box-shadow: 0 0 25px rgba(0, 255, 127, 1);
+    transform: scale(1.1);
+}
+
+/* Logout Button Styling */
+#logout-btn {
+    background: linear-gradient(135deg, #FF4C4C, #FF0000);
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#logout-btn:hover {
+    background: linear-gradient(135deg, #FF0000, #CC0000);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+    transform: scale(1.1);
+}
+
+/* Disabled "Get Started" Button */
+button[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Centered Content */
+.hero-section {
+    text-align: center;
+}
+
+/* Glassmorphic Box */
+.glassmorphic-box {
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 127, 0.3);
+}
+
+/* Glowing Title */
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    color: #00FF7F;
+    text-shadow: 0 0 15px rgba(0, 255, 127, 0.8);
+    animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 15px rgba(0, 255, 127, 0.6); }
+    100% { text-shadow: 0 0 30px rgba(0, 255, 127, 1); }
+}
+
+/* White Tagline */
+.tagline {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 20px;
+}

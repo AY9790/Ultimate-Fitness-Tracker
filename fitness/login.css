@@ -1,0 +1,129 @@
+/* Full Black Background */
+body {
+    background-color: #000;
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6);
+    width: 350px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container h2 {
+    color: #00FF7F;
+    text-shadow: 0 0 10px rgba(0, 255, 127, 0.7);
+}
+
+/* Input Fields */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #2A2A2A;
+    border: 1px solid #00FF7F;
+    color: #E0E0E0;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container input:focus {
+    border-color: #00cc66;
+    box-shadow: 0 0 10px rgba(0, 255, 127, 0.8);
+    outline: none;
+}
+
+/* Password Field with Eye Icon */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #00FF7F;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #00cc66;
+}
+
+/* Remember Me */
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E0E0E0;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.remember-me input {
+    margin-right: 8px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Login Button */
+.login-submit {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #00FF7F, #00cc66);
+    color: #121212;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.8);
+}
+
+.login-submit:hover {
+    background: linear-gradient(135deg, #00cc66, #00994d);
+    box-shadow: 0 0 20px rgba(0, 255, 127, 1);
+    transform: scale(1.05);
+}
+
+/* Back Button */
+.back-page-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-page-btn {
+    display: inline-block;
+    background: rgba(0, 255, 127, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 255, 127, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-page-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 255, 127, 1);
+}
