@@ -21,3 +21,6 @@ To provide users with an easy and visually appealing way to stay consistent with
 Clone the repository
 Open index.html in a browser
 Signup/Login and start tracking your fitness
+
+📷 Screenshots
+
