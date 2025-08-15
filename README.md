@@ -23,4 +23,5 @@ Open index.html in a browser
 Signup/Login and start tracking your fitness
 
 📷 Screenshots
-
+https://github.com/AY9790/Ultimate-Fitness-Tracker/blob/main/Screenshot%202025-08-15%20090429.png
+https://github.com/AY9790/Ultimate-Fitness-Tracker/blob/main/Screenshot%202025-08-15%20090522.png
